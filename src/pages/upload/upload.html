@@ -12,9 +12,18 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
-  <p>hei</p>
-
+  <ion-card>
+    <ion-card-content>
+      <form id="uploadForm">
+        <ion-input type="text" name="title" [(ngModel)] = "title" placeholder="Title"></ion-input>
+          <br>
+        <ion-input type ="text" name="description" [(ngModel)] = "description" placeholder="Description"></ion-input>
+          <br>
+        <input type="file" name="file" (change)="setFile($event)">
+          <br><br>
+        <button ion-button round (click)="startUpload()">Upload</button>
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

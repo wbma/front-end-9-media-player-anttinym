@@ -14,6 +14,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MediaProvider } from '../providers/media/media';
 import {HttpClientModule} from "@angular/common/http";
+import {PipesModule} from '../pipes/pipes.module';
+import {LoginPage} from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import {HttpClientModule} from "@angular/common/http";
     HomePage,
     TabsPage,
     UploadPage,
-    UserPage
+    UserPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    PipesModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,13 +42,14 @@ import {HttpClientModule} from "@angular/common/http";
     HomePage,
     TabsPage,
     UserPage,
-    UploadPage
+    UploadPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MediaProvider
+    MediaProvider,
   ]
 })
 export class AppModule {}

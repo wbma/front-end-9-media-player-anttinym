@@ -15,6 +15,32 @@
 
 <ion-content padding>
 
-  <p>terve</p>
+  <ion-card>
+
+    <img [src]="mediaProvider.apiUrl + 'uploads/' + ('87db1513eb6bb06d3f17472fdc348131' | pipesThumbnail: 'small')">
+
+    <ion-card-content>
+      <ion-card-title>Username</ion-card-title>
+
+      <p>
+        Profile
+        <br>
+        description
+        <br>
+        here
+      </p>
+
+      <ion-row>
+        <ion-col center text-center>
+          <button ion-button icon-left clear small>
+            <ion-icon name="heart"></ion-icon>
+            <div>12 Followers</div>
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+
+  </ion-card>
 
 </ion-content>

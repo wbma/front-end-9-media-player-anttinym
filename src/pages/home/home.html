@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="cards-bg" padding>
 
   <!--ul>
     <li *ngFor="let media of mediaArray">
@@ -29,12 +29,26 @@
       {{media.title}}
     </ion-card-header>
 
-    <img [src]="mediaProvider.mediaUrl + thumbnailer(media.filename)">
+    <img [src]="mediaProvider.mediaUrl + (media.filename | pipesThumbnail: 'large')">
 
     <ion-card-content>
       <p>{{media.description}}</p>
     </ion-card-content>
 
   </ion-card>
+
+  <!--ion-infinite-scroll (ionInfinite)="loadMore()">
+    <ion-infinite-scroll-content>
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll-->
+
+  <ion-row>
+    <ion-col center text-center>
+      <button ion-button round (click)="loadMore()">
+        More images...
+      </button>
+    </ion-col>
+  </ion-row>
 
 </ion-content>
