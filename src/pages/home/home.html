@@ -15,6 +15,14 @@
 
 <ion-content class="cards-bg" padding>
 
+  <ion-row>
+    <ion-col center text-center>
+      <button ion-button round [navPush]="mediaPage">
+        Click here for Trap News
+      </button>
+    </ion-col>
+  </ion-row>
+
   <!--ul>
     <li *ngFor="let media of mediaArray">
       <img [src]="mediaProvider.mediaUrl + thumbnailer(media.filename)">

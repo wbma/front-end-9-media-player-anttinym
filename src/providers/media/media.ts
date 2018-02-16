@@ -50,6 +50,18 @@ export class MediaProvider {
     return this.http.get(this.apiUrl + 'users/user', settings)
   }
 
+  getMediaFile(fileId: string) {
+    return this.http.get(this.apiUrl + 'media', {
+      params: {
+        id: fileId
+      }
+    });
+  }
+
+  filenameSplitter() {
+
+  }
+
   upload(formData) {
     const settings = {
       headers: new HttpHeaders().set('x-access-token', localStorage.getItem('token')),

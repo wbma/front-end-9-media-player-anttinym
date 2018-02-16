@@ -3,6 +3,7 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {MediaProvider} from "../../providers/media/media";
 import {HttpErrorResponse} from '@angular/common/http';
 import {LoginPage} from '../login/login';
+import {VideoPage} from '../video/video';
 
 /**
  * Generated class for the HomePage page.
@@ -17,6 +18,8 @@ import {LoginPage} from '../login/login';
   templateUrl: 'home.html',
 })
 export class HomePage {
+
+  mediaPage = VideoPage;
 
   mediaArray: any;
   mediaIndex = 0;

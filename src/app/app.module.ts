@@ -16,6 +16,7 @@ import { MediaProvider } from '../providers/media/media';
 import {HttpClientModule} from "@angular/common/http";
 import {PipesModule} from '../pipes/pipes.module';
 import {LoginPage} from '../pages/login/login';
+import {VideoPage} from '../pages/video/video';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {LoginPage} from '../pages/login/login';
     TabsPage,
     UploadPage,
     UserPage,
-    LoginPage
+    LoginPage,
+    VideoPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import {LoginPage} from '../pages/login/login';
     TabsPage,
     UserPage,
     UploadPage,
-    LoginPage
+    LoginPage,
+    VideoPage
   ],
   providers: [
     StatusBar,
